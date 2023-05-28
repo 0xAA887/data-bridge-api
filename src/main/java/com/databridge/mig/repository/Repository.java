@@ -20,7 +20,7 @@ public interface Repository<T> {
     /**
      * Retrieves a list of all objects of type T from the database.
      *
-     * @return a CompletableFuture that will be completed with a List of all objects of type T found in the database.
+     * @return a List of T objects
      */
     List<T> findAll();
 
@@ -63,6 +63,9 @@ public interface Repository<T> {
      * @param columnToUpdate   the name of the column to update the value
      * @param filter           the value to use as filter
      * @param newValue         the new value to set for the column
+     * @return true if it has updated, false otherwise.
      */
-    void update(String columnFilterName, String columnToUpdate, String filter, String newValue);
+    default boolean update(String columnFilterName, String columnToUpdate, String filter, String newValue) {
+        return false;
+    }
 }

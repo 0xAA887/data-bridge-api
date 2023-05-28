@@ -1,4 +1,4 @@
-package dev.mig.practice.api.database;
+package com.databridge.mig.database;
 
 import java.sql.Connection;
 
