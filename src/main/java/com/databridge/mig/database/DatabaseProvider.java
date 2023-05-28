@@ -1,4 +1,6 @@
-package com.databridge.mig.database;
+package dev.mig.practice.api.database;
+
+import java.sql.Connection;
 
 /**
  * A database interface for managing database connections.
@@ -10,10 +12,11 @@ package com.databridge.mig.database;
 public interface DatabaseProvider {
 
     /**
-     * Creates a connection to the database.
+     * Retrieves a connection to the database.
      *
+     * @return a Connection object representing the connection to the database.
      */
-    void getConnection();
+    Connection getConnection();
 
     /**
      * Closes an existing database connection.
