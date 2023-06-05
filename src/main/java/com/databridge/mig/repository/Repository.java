@@ -68,4 +68,6 @@ public interface Repository<T> {
     default boolean update(String columnFilterName, String columnToUpdate, String filter, String newValue) {
         return false;
     }
+
+    <V> List<T> findAllOfId(String id, V value);
 }
