@@ -28,15 +28,16 @@ public interface Repository<T> {
      * Saves the specified object of type T to the database.
      *
      * @param object the object of type T to be saved in the database.
+     * @return true if it is saved, false otherwise.
      */
-    void save(T object);
+    boolean save(T object);
 
     /**
      * Deletes the specified object of type T from the database.
      *
      * @param object the object of type T to be deleted from the database.
      */
-    void delete(T object);
+    boolean delete(T object);
 
     /**
      * Searches the database for an object of type T using the specified field and value.
